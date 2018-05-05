@@ -1,26 +1,7 @@
 Milestone 4
 ===========
 
-Folders
--------
-
-Each milestone folder should include the following
-
-* All code you wrote/used
-* A README file
-
-They should not include
-
-* Datasets
-* Large packages
-
 README
 ------
 
-The README file should include
-
-* Description of what your team did
-* Methods used to accomplish each part
-* Potential difficulties faced
-* Resources used
-* Description of how to run the code in the folder
+For this final milestone, I continued to use the boston data and trained an SVM model using an RBF kernel. Next I performed 10 rounds of 10-fold cross validation using each of the machine learning methods I used before and performed t-tests on each combination of tests. We basically rejected the null hypothesis that the distributions of the MSE were the same for every test except for several including the PCA version of gaussian process. This is because there was some wild variation in the MSEs using that machine learning method. The order of best to worst machine learning methods are gaussian process, linear regression, svm, linear regression with PCA, gaussian process with PCA. 

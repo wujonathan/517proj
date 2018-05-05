@@ -1,0 +1,36 @@
+clf mean: 31.0089770086
+lrPCA mean: 42.5541373938
+lr mean: 23.2890679531
+gpPCA mean: 53.9888257571
+gp mean: 11.0092692018
+
+clf & gp
+2.99854128775
+We reject the null; these come from different distributions
+lr & gp
+2.99501620563
+We reject the null; these come from different distributions
+clf & lrPCA
+-2.99867420086
+We reject the null; these come from different distributions
+lrPCA & gpPCA
+-1.11442583979
+We do not reject the null; these may come from the same distribution
+lr & gpPCA
+-2.19388466383
+We do not reject the null; these may come from the same distribution
+clf & lr
+2.99843035797
+We reject the null; these come from different distributions
+lrPCA & lr
+2.99937310329
+We reject the null; these come from different distributions
+lrPCA & gp
+2.99890480034
+We reject the null; these come from different distributions
+gpPCA & gp
+2.49239687942
+We reject the null; these come from different distributions
+clf & gpPCA
+-1.87756077463
+We do not reject the null; these may come from the same distribution

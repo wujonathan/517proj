@@ -18,9 +18,7 @@ RBF_NLPD = []
 
 for train, test in kf.split(Xtrain):
 	gp_rbf = gpc(kernel = 1.0 * RBF([1.0]))
-	print ("fitting at time: " + str(datetime.datetime.now()))
 	gp_rbf.fit(XTrain[train], yTrain[train])
-
 	predict_probs = gp_rbf.predict_probs(XTrain[test])
 
 
@@ -29,7 +27,7 @@ with open('gaussianProcessResults.txt', 'w') as o:
 	o.write('	RBF kernel:' + '\n')
 	o.write('		accuracy: ' + str(accuracy_scores_rbf) + '\n')
 	# o.write('		NLPD: ' + str(NLPD_scores_rbf) + '\n')
-	o.write('	White kernel:' + '\n')
+	o.write('	While kernel:' + '\n')
 	o.write('		accuracy: ' + str(accuracy_scores_white) + '\n')
 	# o.write('		NLPD: ' + str(NLPD_scores_white) + '\n')
 	o.write('	Dot Product kernel:' + '\n')

@@ -2,9 +2,9 @@ import numpy as np
 import pyGPs
 import datetime
 
-# dataFilename = '../dataset/debug.csv'
+dataFilename = '../dataset/debug.csv'
 
-dataFilename = '../dataset/dota2Smallest.csv'
+# dataFilename = '../dataset/dota2Smallest.csv'
 
 numpyArr = np.loadtxt(dataFilename, delimiter=",")
 yTrain, XTrain = np.hsplit(numpyArr, [1])
@@ -44,11 +44,15 @@ with open('gaussianProcessResultsDemo.txt', 'w') as o:
 	o.write('Cross Val Scores:' + '\n')
 	o.write('RBF kernel:' + '\n')
 	o.write('	Accuracy: ' + str(['%.4f' % round(n, 4) for n in RBF_ACC]) + '\n')
-	o.write('	Average Accuracy: ' + str('%.4f' % round(np.mean(RBF_ACC), 4)) + '\n')
+	o.write('	Accuracy Average: ' + str('%.4f' % round(np.mean(RBF_ACC), 4)) + '\n')
+	o.write('	Accuracy Std: ' + str('%.4f' % round(np.std(RBF_ACC), 4)) + '\n')
 	o.write('	NLPD: ' + str(['%.4f' % round(n, 4) for n in RBF_NLPD]) + '\n')
-	o.write('	Average NLPD: ' + str('%.4f' % round(np.mean(RBF_NLPD), 4)) + '\n')
+	o.write('	NLPD Mean: ' + str('%.4f' % round(np.mean(RBF_NLPD), 4)) + '\n')
+	o.write('	NLPD Std: ' + str('%.4f' % round(np.std(RBF_NLPD), 4)) + '\n')
 	o.write('Matern kernel:' + '\n')
 	o.write('	Accuracy: ' + str(['%.4f' % round(n, 4) for n in Matern_ACC]) + '\n')
-	o.write('	Average accuracy: ' + str('%.4f' % round(np.mean(Matern_ACC), 4)) + '\n')
+	o.write('	Accuracy Average: ' + str('%.4f' % round(np.mean(Matern_ACC), 4)) + '\n')
+	o.write('	Accuracy Std: ' + str('%.4f' % round(np.std(Matern_ACC), 4)) + '\n')
 	o.write('	NLPD: ' + str(['%.4f' % round(n, 4) for n in Matern_NLPD]) + '\n')
-	o.write('	Average NLPD: ' + str('%.4f' % round(np.mean(Matern_NLPD), 4)) + '\n')
+	o.write('	NLPD Mean: ' + str('%.4f' % round(np.mean(Matern_NLPD), 4)) + '\n')
+	o.write('	NLPD Std: ' + str('%.4f' % round(np.std(Matern_NLPD), 4)) + '\n')
